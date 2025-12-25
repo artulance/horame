@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Horas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="left-panel">
+            <div class="container">
+                <h1>Contador de Horas Semanales</h1>
+                <p>Total semanal: 37.5 horas (7.5 horas diarias)</p>
+                
+                <label for="horas-diarias">Horas diarias:</label>
+                <input type="number" id="horas-diarias" value="7.5" step="0.5" min="0">
+                
+                <label for="hora-entrada">Hora de entrada (HH:MM):</label>
+                <input type="time" id="hora-entrada">
+                
+                <p id="hora-salida">Hora sugerida de salida: --:--</p>
+                
+                <p id="hora-salida-saldo">Hora sugerida de salida con saldo: --:--</p>
+                
+                <button id="guardar">Guardar Hora de Entrada</button>
+                
+                <hr>
+                
+                <h2>Contador de Tiempo Transcurrido</h2>
+                <label for="hora-entrada-contador">Hora de entrada (HH:MM):</label>
+                <input type="time" id="hora-entrada-contador">
+                
+                <label for="hora-salida-contador">Hora de salida (HH:MM):</label>
+                <input type="time" id="hora-salida-contador">
+                
+                <p id="tiempo-transcurrido">Tiempo transcurrido: -- horas -- minutos</p>
+                
+                <button id="registrar-dia">Registrar Día</button>
+                
+                <p id="saldo-mensual">Saldo semanal: 0.0 horas (neutro)</p>
+                
+                <p id="info-localstorage">Información en localStorage: --</p>
+            </div>
+        </div>
+        
+        <div class="right-panel">
+            <div class="container">
+                <h2>Editar Información en localStorage</h2>
+                
+                <label for="edit-hora-entrada">Hora de entrada guardada:</label>
+                <input type="time" id="edit-hora-entrada">
+                
+                <label for="edit-horas-diarias">Horas diarias guardadas:</label>
+                <input type="number" id="edit-horas-diarias" step="0.5" min="0">
+                
+                <label for="edit-saldo-semanal">Saldo semanal:</label>
+                <input type="number" id="edit-saldo-semanal" step="0.1">
+                
+                <button id="guardar-edicion">Guardar Cambios</button>
+                <button id="borrar-localstorage">Borrar Todo localStorage</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
